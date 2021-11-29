@@ -1,3 +1,9 @@
 body {
     background: linear-gradient(72.85deg, #D9547B 0%, #F8AD48 100%);
 }
+
+.bouton {
+    background-color: white;
+    border-radius: 50%;
+    position:absolute;
+}
