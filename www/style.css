@@ -2,8 +2,70 @@ body {
     background: linear-gradient(72.85deg, #D9547B 0%, #F8AD48 100%);
 }
 
-.bouton {
+/* Barre de Recherche */
+.bare-recherche{
     background-color: white;
-    border-radius: 50%;
-    position:absolute;
+    border-radius: 100px;
+    height: 80px;
+    width: 612px;
+    position: absolute;
+    top:32px;
+    right:32px;
+
+}
+
+input{
+    border:0;
+  position: absolute;
+left: 14.38%;
+right: 57.35%;
+top: 30%;
+bottom: 30%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+
+/* Black */
+
+color: #000000;
+
+opacity: 0.2;
+}
+
+
+img{
+    position: absolute;
+left: 5.23%;
+right: 90.85%;
+top: 35%;
+bottom: 35%;
+}
+
+
+.bouton {
+  /* Auto layout */
+  color:white;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px 32px;
+
+position: absolute;
+left: 80.56%;
+right: 1.96%;
+top: 15%;
+bottom: 15%;
+
+/* Black */
+
+background: #000000;
+border-radius: 100px;
+    
 }
