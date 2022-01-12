@@ -35,16 +35,12 @@ font-style: normal;
 font-weight: normal;
 font-size: 24px;
 line-height: 32px;
-/* identical to box height, or 133% */
-
 
 /* Black */
 
 color: #000000;
-
 opacity: 0.2;
 }
-
 
 img{
   position: absolute;
@@ -54,17 +50,14 @@ top: 35%;
 bottom: 35%;
 }
 
-
 .bouton {
-/* Auto layout */
-color:white;
 
+color:white;
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 20px 32px;
-
 position: absolute;
 left: 80.56%;
 right: 1.96%;
@@ -79,19 +72,19 @@ border-radius: 100px;
 }
 
 /* Texte */
-/* Auto layout */
+
 .donnes{
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
-
 position: absolute;
 width: 400px;
 height: 212px;
 left: 202px;
 top: 338px;
 }
+
 .donnes p{
 
 position: static;
@@ -105,13 +98,8 @@ font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 24px;
-/* identical to box height, or 150% */
-
 
 color: #FFFFFF;
-
-
-/* Inside auto layout */
 
 flex: none;
 order: 0;
@@ -122,6 +110,8 @@ margin: 0px 8px;
 .donnes div{
 display: flex;
 }
+
+/* **************************************** */
 
 #ville{
 
@@ -136,12 +126,12 @@ font-style: normal;
 font-weight: normal;
 font-size: 40px;
 line-height: 48px;
-/* identical to box height, or 120% */
-
 
 color: #FFFFFF;
 
 }
+
+/* **************************************** */
 
 #date{
 position: absolute;
@@ -155,11 +145,11 @@ font-style: normal;
 font-weight: normal;
 font-size: 40px;
 line-height: 48px;
-/* identical to box height, or 120% */
-
 
 color: #FFFFFF;
 }
+
+/* **************************************** */
 
 #vent-vitesse{
 position: static;
@@ -173,20 +163,18 @@ font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 24px;
-/* identical to box height, or 150% */
 
 text-align: right;
 
 color: #FFFFFF;
-
-
-/* Inside auto layout */
 
 flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 8px; 
 }
+
+/* **************************************** */
 
 #soleil-leve{
 position: static;
@@ -200,20 +188,18 @@ font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 24px;
-/* identical to box height, or 150% */
 
 text-align: right;
 
 color: #FFFFFF;
-
-
-/* Inside auto layout */
 
 flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 8px;
 }
+
+/* **************************************** */
 
 #soleil-couche{
 position: static;
@@ -227,14 +213,10 @@ font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 24px;
-/* identical to box height, or 150% */
 
 text-align: right;
 
 color: #FFFFFF;
-
-
-/* Inside auto layout */
 
 flex: none;
 order: 0;
@@ -242,6 +224,7 @@ flex-grow: 0;
 margin: 0px 8px;
 }
 
+/* **************************************** */
 
 #pluie{
 position: static;
@@ -255,27 +238,20 @@ font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 24px;
-/* identical to box height, or 150% */
 
 text-align: right;
 
 color: #FFFFFF;
-
-
-/* Inside auto layout */
 
 flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 8px;
 }
+
 /*Icones*/
 
-
-
 #vent-vitesse+img{
-
-
 position: static;
 width: 24px;
 height: 24px;
@@ -290,7 +266,6 @@ margin: 0px 8px;
 /* **************************************** */
 
 #soleil-leve+img{
-
 position: static;
 width: 24px;
 height: 24px;
