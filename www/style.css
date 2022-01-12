@@ -1,33 +1,331 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="claudia" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Météo</title>
 
-</head>
-<body onload="init()" id="fond">
- <header>
-    <div class="bare-recherche">
-         <img src="img/Search.png" alt="loupe"><input type="text" placeholder="Search Location"><button class="bouton" type="button">Search</button>
-    </div>    
- </header>
-    <div class="texte">
-        <p id="ville"></p>
-        <p id="date"></p>
-       <div class="donnes">
-                <p>Wind(gust)</p><p id="vent-vitesse"><img src="img/NameWind.png" alt=""></p>
+/* Fond du site */
+.chaud{
+  background: linear-gradient(72.85deg, #D9547B 0%, #F8AD48 100%);
+}
+.modere{
+background: linear-gradient(72.85deg, #71376E 0%, #F8AD48 100%);
+}
+.froid{
+background: linear-gradient(72.85deg, #1DA9C2 0%, #F8AD48 100%);
+}
 
-                <p>Sunrise</p><p id="soleil-leve"><img src="img/NameSunrise.png" alt=""></p>
-            
-           
-                <p>Sunset</p><p id="soleil-couche"><img src="img/NameSunset.png" alt=""></p>
-           
-                <p>Precipitation</p><p id="pluie"><img src="img/NamePrecipitation.png" alt=""></p>
-        </div>
-    </div>
- <script src="script.js"></script>
-</body>
-</html>
+/* Barre de Recherche */
+.bare-recherche{
+  background-color: white;
+  border-radius: 100px;
+  height: 80px;
+  width: 612px;
+  position: absolute;
+  top:32px;
+  right:32px;
+
+}
+
+input{
+  border:0;
+position: absolute;
+left: 14.38%;
+right: 57.35%;
+top: 30%;
+bottom: 30%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+
+/* Black */
+
+color: #000000;
+
+opacity: 0.2;
+}
+
+
+img{
+  position: absolute;
+left: 5.23%;
+right: 90.85%;
+top: 35%;
+bottom: 35%;
+}
+
+
+.bouton {
+/* Auto layout */
+color:white;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px 32px;
+
+position: absolute;
+left: 80.56%;
+right: 1.96%;
+top: 15%;
+bottom: 15%;
+
+/* Black */
+
+background: #000000;
+border-radius: 100px;
+  
+}
+
+/* Texte */
+/* Auto layout */
+.donnes{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 400px;
+height: 212px;
+left: 202px;
+top: 338px;
+}
+.donnes p{
+
+position: static;
+width: 79px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 8px;
+}
+
+.donnes div{
+display: flex;
+}
+
+#ville{
+
+position: absolute;
+width: 81px;
+height: 48px;
+left: 202px;
+top: 194px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height, or 120% */
+
+
+color: #FFFFFF;
+
+}
+
+#date{
+position: absolute;
+width: 367px;
+height: 48px;
+left: 202px;
+top: 242px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height, or 120% */
+
+
+color: #FFFFFF;
+}
+
+#vent-vitesse{
+position: static;
+width: 60px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-align: right;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 8px; 
+}
+
+#soleil-leve{
+position: static;
+width: 60px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-align: right;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 8px;
+}
+
+#soleil-couche{
+position: static;
+width: 60px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-align: right;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 8px;
+}
+
+
+#pluie{
+position: static;
+width: 60px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-align: right;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 8px;
+}
+/*Icones*/
+
+
+
+#vent-vitesse+img{
+
+
+position: static;
+width: 24px;
+height: 24px;
+left: calc(50% - 24px/2 + 34px);
+top: calc(50% - 24px/2);
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 8px;
+}
+/* **************************************** */
+
+#soleil-leve+img{
+
+position: static;
+width: 24px;
+height: 24px;
+left: calc(50% - 24px/2 + 37.06px);
+top: calc(50% - 24px/2);
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 8px;
+}
+/* **************************************** */
+
+#soleil-couche+img{
+position: static;
+width: 24px;
+height: 24px;
+left: calc(50% - 24px/2 + 24px);
+top: calc(50% - 24px/2);
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 8px;
+}
+/* **************************************** */
+#pluie+img{
+position: static;
+width: 24px;
+height: 24px;
+left: calc(50% - 24px/2 + 31.5px);
+top: calc(50% - 24px/2);
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 8px;
+}
