@@ -1,5 +1,5 @@
-let API_KEY ="2bd5dddb9287492f812f4e079c44f065";
-let Ville = "Chambery"; //Ville de base
+let API_KEY ='2bd5dddb9287492f812f4e079c44f065';
+let ville = "Chambery"; //Ville de base
 var infos = []; //Variable ou sera stocké les informations renvoyé par l'API
 
 function ajaxGetRequest(callback, url, async) {
@@ -19,13 +19,17 @@ function ajaxGetRequest(callback, url, async) {
 }
 
 function meteoPush(n){
- 
+     var donnes =JSON.parse(n); // On transforme le texte recu par l'API en objet JSON
+     donnes = donnes.data;      // On récupere uniquement les "data"
+     donnes= donnes[0];         // 
+     console.log(donnes);
+    changementFond(donnes.temp);
+    affichageVille(donnes.city_name);   //On change l'affichage de la ville
+    
 }
-//fonction
 
 function init() { 
-    ajaxGetRequest(meteoPush, 'https://api.weatherbit.io/v2.0/current?key=${API_KEY}&city=${Ville}',true); //Appel initial de l'API 
-    changementFond(5);
+    ajaxGetRequest(meteoPush, 'https://api.weatherbit.io/v2.0/current?key='+API_KEY+'&city='+ville,true); //Appel initial de l'API    
 }
 
 function changementFond(temp){
@@ -42,4 +46,12 @@ function changementFond(temp){
     else if(temp<10){   //Cas : Température inférieur à 10°C
        fond.setAttribute('class', 'froid');
     }
+}
+
+function affichageVille(ville){
+    document.getElementById('ville').innerText=ville;
+}
+
+function affichageDate(date){
+    document.getElementById('date').innerText=date;
 }
