@@ -25,6 +25,7 @@ function meteoPush(n){
      console.log(donnes);
     changementFond(donnes.temp);
     affichageVille(donnes.city_name);   //On change l'affichage de la ville
+    changementVariables(donnes);        //On change les données secondaires
     
 }
 
@@ -54,4 +55,16 @@ function affichageVille(ville){
 
 function affichageDate(date){
     document.getElementById('date').innerText=date;
+}
+
+function changementVariables(donnes){
+    var vitesse_vent = donnes.wind_spd;
+    vitesse_vent = vitesse_vent * 3.6; // On transforme les m/s en km/h
+    vitesse_vent = Math.round(vitesse_vent); // Arrondi la vitesse du vent
+    document.getElementById('vent-vitesse').innerText = vitesse_vent + " km/h";
+    document.getElementById('soleil-leve').innerText = donnes.sunrise;
+    document.getElementById('soleil-couche').innerText= donnes.sunset;
+    document.getElementById('pluie').innerText = donnes.precip + " mm";
+
+
 }
