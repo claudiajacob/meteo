@@ -25,6 +25,7 @@ function meteoPush(n) {
     console.log(donnes);      //Debugage
     changementFond(donnes.temp);
     affichageVille(donnes.city_name);   //On change l'affichage de la ville
+    affichageDate();                    //On affiche la date d'aujourd'hui
     changementVariables(donnes);        //On change les données secondaires
     afficherImageTemp(donnes);
 }
@@ -54,8 +55,53 @@ function affichageVille(ville) {
     document.getElementById('ville').innerText = ville;   //On change le contenu de l'element HTML d'ID 'ville' en y mettant la nouvelle ville
 }
 
-function affichageDate(date) {
-    document.getElementById('date').innerText = date;     //On change le contenu de l'elemet HTML d'ID 'date' en y mettant la date des données
+function affichageDate() {
+    
+    var date = CurrentDate.getDate() + " " + mois(CurrentDate.getMonth());
+    document.getElementById('date').innerText = "Today "+ date;     //On change le contenu de l'elemet HTML d'ID 'date' en y mettant la date des données
+}
+
+function mois(m) {      //Transforme le mois de nombre en Lettres
+    switch (m) {
+        case 0:
+            return 'January';
+            break;
+        case 1:
+            return 'Febuary';
+            break;
+        case 2:
+            return 'March';
+            break;
+        case 3:
+            return 'April';
+            break;
+        case 4:
+            return 'Mai';
+        case 5:
+            return 'June';
+            break;
+        case 6:
+            return 'July';
+            break;
+        case 7:
+            return 'August';
+            break;
+        case 8:
+            return 'September';
+            break;
+        case 9:
+            return 'October';
+            break;
+        case 10:
+            return 'November';
+            break;
+        case 11:
+            return 'December';
+            break;
+        default:
+            return 'Erreur';
+            break;
+    }
 }
 
 function changementVariables(donnes) {
@@ -75,6 +121,7 @@ function afficherTemp(temp) {
 }
 
 function afficherImageTemp(infos){
+    //Cette fonction va recuperer le "weather code" et en fonction de ce dernier afficher l'image correspondante
     var ciel = infos.weather.code;
  var emile =document.getElementById('ciel');
  switch(ciel){
@@ -84,7 +131,7 @@ function afficherImageTemp(infos){
      //Tonere & soleil
      case 202:
          //Tonere & soleil
-         if (infos.pod == "d") {
+         if (infos.pod == "d") { //Image différente entre le jour et la nuit
              emile.setAttribute('src', 'img/partly_day_storm.png');
          }
          else {
@@ -99,7 +146,7 @@ function afficherImageTemp(infos){
      //Tonere
      case 233:
          //Tonere
-         if (infos.pod=="d"){
+         if (infos.pod == "d") { //Image différente entre le jour et la nuit
             emile.setAttribute('src','img/thnderstorm.png');
          }
          else{
