@@ -28,7 +28,7 @@ function meteoPush(n) {
     affichageDate();                    //On affiche la date d'aujourd'hui
     changementVariables(donnes);        //On change les données secondaires
     afficherImageTemp(donnes);
-    //barreFooter();
+    barreFooter();
 }
 
 function init() {
@@ -257,4 +257,47 @@ function rechercheEntrer(key) { //Lance la recherche si on presse la touche entr
     if (x == 13) {
         recherche();
     }
+}
+
+function barreFooter(){
+    var barreNav = document.getElementById('nav');
+    var p;
+    var js =CurrentDate.getDay();
+    for (let i = 0; i <7; i++) {
+        p = document.createElement("p");
+        if(i==0){
+            p.innerText="Today";
+            p.setAttribute('id','today');
+        }
+        else{
+            console.log(js);
+            switch((js-1+i)%7){
+                case 0:
+                    p.innerText = "Monday";
+                    break;
+                    case 1:
+                    p.innerText = "Tuesday";
+                    break;
+                    case 2:
+                    p.innerText = "Wednesday";
+                    break;
+                    case 3:
+                    p.innerText = "Thursday";
+                    break;
+                    case 4:
+                    p.innerText = "Friday";
+                    break;
+                    case 5:
+                    p.innerText = "Saturday";
+                    break;
+                    case 6:
+                    p.innerText = "Sunday";
+                    break;
+                    default:
+                        console.log("Erreur");
+            }
+        }
+        barreNav.append(p);
+}
+
 }
