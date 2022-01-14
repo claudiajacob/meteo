@@ -19,7 +19,16 @@ background: linear-gradient(72.85deg, #1DA9C2 0%, #F8AD48 100%);
   position: absolute;
   top:32px;
   right:32px;
+}
 
+.bare-recherche2{
+  background-color: white;
+  border-radius: 100px;
+  height: 80px;
+  width: 612px;
+  position: absolute;
+  top:32px;
+  right:32px;
 }
 
 input{
@@ -55,7 +64,7 @@ bottom: 35%;
 }
 
 
-.bouton {
+#bouton {
 /* Auto layout */
 color:white;
 
@@ -92,6 +101,13 @@ height: 212px;
 left: 202px;
 top: 338px;
 }
+
+.invisible{
+display:none;
+}
+
+
+/***************************************/
 
 .donnes div {
 border-bottom: white;
@@ -414,3 +430,5 @@ background: #FFFFFF;
 border-radius: 100px;
 color:black;
 }
+
+

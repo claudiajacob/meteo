@@ -1,6 +1,6 @@
 let API_KEY = '2bd5dddb9287492f812f4e079c44f065'; //Clef de l'API
 let ville = "Chambery"; //Ville de base
-var infos = []; //Variable ou sera stocké les informations renvoyé par l'API
+var statu = true;
 let CurrentDate = new Date();
 function ajaxGetRequest(callback, url, async) {
     var xhr = new XMLHttpRequest(); // Création de l'objet
@@ -299,5 +299,21 @@ function barreFooter(){
         }
         barreNav.append(p);
 }
-
 }
+/* Ne fonctionne pas
+function ouvrir(){
+    if(statu==true){
+    document.getElementById('recherche').setAttribute('class','invisible');
+        document.getElementById('recherche').setAttribute('class', 'bare-recherche2');
+        document.getElementById('bouton').setAttribute('class', 'invisible');
+        document.getElementById('bouton').setAttribute('id', 'rien');
+    }
+    else{
+        document.getElementById('recherche').setAttribute('class', 'visible');
+        document.getElementById('recherche').setAttribute('class', 'bare-recherche');
+        document.getElementById('rien').setAttribute('class', 'visible'); 
+        document.getElementById('rien').setAttribute('id', 'bouton');
+    }
+    statu= !statu;
+}
+*/

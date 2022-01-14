@@ -11,7 +11,7 @@
 <body onload="init()" id="fond">
  <header>
     <div class="bare-recherche">
-         <img src="img/Search.png" alt="loupe"><input id= "recherche" onkeypress="rechercheEntrer(event)" type="text" placeholder="Search Location"><button class="bouton" type="button" onclick="recherche()">Search</button>
+         <a><img src="img/Search.png" alt="loupe" onclick="ouvrir()"></a><input id= "recherche" onkeypress="rechercheEntrer(event)" type="text" placeholder="Search Location"><button id="bouton" type="button" onclick="recherche()">Search</button>
     </div>    
  </header>
     <div class="texte">
