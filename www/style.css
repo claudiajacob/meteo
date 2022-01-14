@@ -131,7 +131,7 @@ display: flex;
 #ville{
 
 position: absolute;
-width: 81px;
+
 height: 48px;
 left: 202px;
 top: 194px;
@@ -279,8 +279,6 @@ margin: 0px 8px;
 
 
 #vent-vitesse+img{
-
-
 position: static;
 width: 24px;
 height: 24px;
@@ -364,8 +362,8 @@ opacity: 0.2;
 
 #ciel{
 position: absolute;
-left : 220px;
-top  : 50px;
+left : 325px;
+top  : 125px;
 
 background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
 }

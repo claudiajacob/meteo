@@ -11,11 +11,11 @@
 <body onload="init()" id="fond">
  <header>
     <div class="bare-recherche">
-         <img src="img/Search.png" alt="loupe"><input type="text" placeholder="Search Location"><button class="bouton" type="button">Search</button>
+         <img src="img/Search.png" alt="loupe"><input id= "recherche" onkeypress="rechercheEntrer(event)" type="text" placeholder="Search Location"><button class="bouton" type="button" onclick="recherche()">Search</button>
     </div>    
  </header>
     <div class="texte">
-        <p id="ville">Bonjour</p>
+        <p id="ville"></p>
         <p id="date"></p>
        <div class="donnes">
                 <div><p>Wind(gust)</p><p id="vent-vitesse"></p><img src="img/NameWind.png" alt=""></div>
@@ -31,6 +31,11 @@
         <p id="temperature"></p>
         <img src="" alt="" id="ciel">
     </div>
+    
+    <footer>
+        <nav id="nav">
+        </nav>
+    </footer>
  <script src="script.js"></script>
 </body>
 </html>

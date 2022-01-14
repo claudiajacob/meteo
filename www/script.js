@@ -28,6 +28,7 @@ function meteoPush(n) {
     affichageDate();                    //On affiche la date d'aujourd'hui
     changementVariables(donnes);        //On change les données secondaires
     afficherImageTemp(donnes);
+    //barreFooter();
 }
 
 function init() {
@@ -212,11 +213,22 @@ function afficherImageTemp(infos){
          break;
      case 800:
          //Soleil
-         emile.setAttribute('src', 'img/sun.png');
+         if (infos.pod == "d") { //Image différente entre le jour et la nuit
+             emile.setAttribute('src', 'img/sun.png');
+         }
+         else {
+             emile.setAttribute('src', 'img/moon.png');
+         }
          break;
      case 803:
          //Soleil avec nuages devant
-         emile.setAttribute('src', 'img/partly_cloudy.png');
+         
+         if (infos.pod == "d") { //Image différente entre le jour et la nuit
+             emile.setAttribute('src', 'img/partly_cloudy.png');
+         }
+         else {
+             emile.setAttribute('src', 'img/partly_moon.png');
+         }
          break;
      case 803:
          //Nuages
@@ -232,4 +244,17 @@ function afficherImageTemp(infos){
  }
 
     
+}
+
+function recherche(){
+    ville=document.getElementById('recherche').value;
+    ajaxGetRequest(meteoPush, 'https://api.weatherbit.io/v2.0/current?key=' + API_KEY + '&city=' + ville, true);
+    document.getElementById('recherche').value="";
+
+}
+function rechercheEntrer(key) { //Lance la recherche si on presse la touche entrer
+    var x = key.which || key.keyCode;
+    if (x == 13) {
+        recherche();
+    }
 }
